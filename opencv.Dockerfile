@@ -7,7 +7,7 @@
 # Inspection:
 #     docker run -t -i masszhou/toolchains:dev-opencv-4.2.0 /bin/bash
 
-FROM masszhou/toolchains:builder-base-0.1
+FROM masszhou/toolchains:dev-cuda-10.2
 LABEL maintainer="Zhiliang Zhou <zhouzhiliang@gmail.com>"
 
 RUN apt-get update

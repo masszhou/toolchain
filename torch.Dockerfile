@@ -15,7 +15,7 @@
 #     VERSION=1.0.1
 #     docker run --rm masszhou/toolchains:dev-torch-1.5.1 tar czf - libtorch >libtorch-${VERSION}.tgz
 
-FROM masszhou/toolchains:builder-base-0.1
+FROM masszhou/toolchains:dev-cuda-10.2
 LABEL maintainer="Zhiliang Zhou <zhouzhiliang@gmail.com>"
 
 USER root

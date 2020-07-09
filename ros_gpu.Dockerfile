@@ -17,7 +17,7 @@
 #     docker run -v /host/directory:/container/directory -it --gpus all masszhou/toolchains:dev-ros-melodic-gpu /bin/bash -c "rosrun <app>"
 #     docker run -v /media/zzhou/data-passat/:/media -it --net=host masszhou/toolchains:dev-ros-melodic-gpu -c "rosbag play -l /media/klettwitz.bag"
 
-FROM masszhou/toolchains:builder-base-0.1
+FROM masszhou/toolchains:dev-cuda-10.2
 LABEL maintainer="Zhiliang Zhou <zhouzhiliang@gmail.com>"
 ENV ROS_WS=/home/catkin_ws
 ENV ROS_DISTRO=melodic
