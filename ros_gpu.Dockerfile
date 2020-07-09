@@ -2,10 +2,10 @@
 #     nvidia/cuda, 10.2-cudnn7-devel-ubuntu18.04
 #
 # Build:
-#     docker build -t masszhou/dev-ros:melodic-gpu -f ros_gpu.Dockerfile .
+#     docker build -t masszhou/toolchains:dev-ros-melodic-gpu -f ros_gpu.Dockerfile .
 #
 # Inspection:
-#     docker run -t -i masszhou/dev-ros:melodic-gpu /bin/bash
+#     docker run -t -i masszhou/toolchains:dev-ros-melodic-gpu /bin/bash
 #
 # Notes:
 #    1. ros-melodic-desktop has opencv 3.2 included
@@ -14,10 +14,10 @@
 #     docker run -it --net=host masszhou/dev-fsd:2020-02-cpu /bin/bash -c "roscore"
 #
 # ROS app:
-#     docker run -v /host/directory:/container/directory -it masszhou/dev-fsd:2020-02-cpu /bin/bash -c "rosbag play -l /media/klettwitz.bag"
-#     docker run -v /media/zzhou/data-passat/:/media -it --net=host masszhou/dev-fsd:2020-02-cpu /bin/bash -c "rosbag play -l /media/klettwitz.bag"
+#     docker run -v /host/directory:/container/directory -it --gpus all masszhou/toolchains:dev-ros-melodic-gpu /bin/bash -c "rosrun <app>"
+#     docker run -v /media/zzhou/data-passat/:/media -it --net=host masszhou/toolchains:dev-ros-melodic-gpu -c "rosbag play -l /media/klettwitz.bag"
 
-FROM masszhou/builder-base:0.1
+FROM masszhou/toolchains:builder-base-0.1
 LABEL maintainer="Zhiliang Zhou <zhouzhiliang@gmail.com>"
 ENV ROS_WS=/home/catkin_ws
 ENV ROS_DISTRO=melodic

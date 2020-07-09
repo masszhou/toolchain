@@ -6,16 +6,16 @@
 #     2. fix path error -> cp -r pytorch/build/build/lib libtorch
 #
 # Build:
-#     docker build -t masszhou/builder-torch:1.5.1 -f Dockerfile.torch .
+#     docker build -t masszhou/toolchains:dev-torch-1.5.1 -f Dockerfile.torch .
 #
 # Inspection:
-#     docker run -t -i masszhou/builder-torch:0.1 /bin/bash
+#     docker run -t -i masszhou/toolchains:dev-torch-1.5.1 /bin/bash
 #
 # Export to local:
 #     VERSION=1.0.1
-#     docker run --rm masszhou/builder-torch:0.1 tar czf - libtorch >libtorch-${VERSION}.tgz
+#     docker run --rm masszhou/toolchains:dev-torch-1.5.1 tar czf - libtorch >libtorch-${VERSION}.tgz
 
-FROM masszhou/builder-base:0.1
+FROM masszhou/toolchains:builder-base-0.1
 LABEL maintainer="Zhiliang Zhou <zhouzhiliang@gmail.com>"
 
 USER root

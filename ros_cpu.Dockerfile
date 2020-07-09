@@ -2,10 +2,10 @@
 #     ubuntu:18.04
 #
 # Build:
-#     docker build -t masszhou/dev-ros:melodic-cpu -f ros_cpu.Dockerfile .
+#     docker build -t masszhou/toolchains:dev-ros-melodic-cpu -f ros_cpu.Dockerfile .
 #
 # Inspection:
-#     docker run -t -i masszhou/dev-ros:melodic-cpu /bin/bash
+#     docker run -t -i masszhou/toolchains:dev-ros-melodic-cpu /bin/bash
 #
 # Notes:
 #    1. ros-melodic-desktop has opencv 3.2 included

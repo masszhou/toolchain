@@ -2,12 +2,12 @@
 #     https://www.pyimagesearch.com/2018/05/28/ubuntu-18-04-how-to-install-opencv/
 #
 # Build:
-#     docker build -t masszhou/builder-opencv:4.2.0 -f Dockerfile.opencv .
+#     docker build -t masszhou/toolchains:dev-opencv-4.2.0 -f Dockerfile.opencv .
 #
 # Inspection:
-#     docker run -t -i masszhou/builder-opencv:4.2.0 /bin/bash
+#     docker run -t -i masszhou/toolchains:dev-opencv-4.2.0 /bin/bash
 
-FROM masszhou/builder-base:0.1
+FROM masszhou/toolchains:builder-base-0.1
 LABEL maintainer="Zhiliang Zhou <zhouzhiliang@gmail.com>"
 
 RUN apt-get update

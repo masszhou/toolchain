@@ -1,8 +1,8 @@
 # Build:
-#     docker build -t masszhou/builder-base:0.1 -f Dockerfile.base .
+#     docker build -t masszhou/toolchains:builder-base-0.1 -f base.Dockerfile .
 #
 # Inspection:
-#     docker run -t -i masszhou/builder-base:0.1 /bin/bash 
+#     docker run -t -i masszhou/toolchains:builder-base-0.1 /bin/bash 
 
 ARG cuda_version=10.2
 ARG cudnn_version=7
