@@ -1,5 +1,5 @@
 # Build:
-#     docker build -t masszhou/toolchains:dev-cuda-10.2 -f base.Dockerfile .
+#     docker build -t masszhou/toolchains:dev-cuda-10.2 -f cuda.Dockerfile .
 #
 # Inspection:
 #     docker run -t -i masszhou/toolchains:dev-cuda-10.2 /bin/bash 
